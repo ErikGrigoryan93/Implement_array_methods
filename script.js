@@ -49,6 +49,25 @@
 // const values = arr.myFilter(item => item > 5)
 // console.log(values);
 
+//------------------myForEach
+
+// const arr = [ 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+// Array.prototype.myForEach = function(callback) {
+//     const result = [];
+//     for ( let i = 0; i < this.length; i++) {
+//         result.push(callback(this[i],i,this))
+//     }
+//     return result
+    
+// }
+
+// arr.myForEach(function(item,i,arr){
+//     console.log(item + i);
+// })
+
+
+
 
 
 
