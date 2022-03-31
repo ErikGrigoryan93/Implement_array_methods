@@ -11,22 +11,51 @@
 
 //----------------myMap
 
-const arr = [ 1, 2, 3, 4, 5, 6, 7, 8, 9];
+// const arr = [ 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-Array.prototype.myMap = function(callback) {
-    const result = [];
-    for(let i = 0; i < this.length; i++) {
-        if (this[i] === undefined) {
-            continue
-        }
-        result.push(callback(this[i], i, this));
-    }
+// Array.prototype.myMap = function(callback) {
+//     const result = [];
+//     for(let i = 0; i < this.length; i++) {
+//         if (this[i] === undefined) {
+//             continue
+//         }
+//         result.push(callback(this[i], i, this));
+//     }
+//     return result;
 
-    return result;
-}
+// }
 
-const values = arr.myMap((item) => {
-    return item + 1;
-})
+// const values = arr.myMap((item) => {
+//     return item + 1 ;
+// })
 
-console.log(values);
+// console.log(values);
+
+//-----------------myFilter
+
+// const arr = [ 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+// Array.prototype.myFilter = function(checkElement) {
+//     const returnArr = [];
+//     for (let i = 0; i < this.length; i++) {
+//       if (checkElement(this[i])) {
+//         returnArr.push(this[i]);
+//       }
+//     }
+//     return returnArr;
+// };
+
+
+// const values = arr.myFilter(item => item > 5)
+// console.log(values);
+
+
+
+
+
+
+
+
+
+
+
