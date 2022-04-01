@@ -106,7 +106,7 @@
 
 // console.log(myflat(arr,Infinity));
 
-//---------------------------------------myPop
+//----------------------myPop
 
 // const arr = [ 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
@@ -115,6 +115,23 @@
 // }
 
 // console.log(arr.myPop());
+
+
+//----------------mySlice
+
+// const arr = [ 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+// Array.prototype.mySlice = function(start,end) {
+//     let sliced = [];
+//     for(let i = start; i < end; i++) {
+//         sliced.push(this[i])
+//     }
+//     return sliced
+
+// }
+
+// console.log(arr.slice(2,5));
+// console.log(arr.mySlice(2,5));
 
 
 
