@@ -1,4 +1,5 @@
-// ------------------Implement array methods 
+//----------------Implement array methods 
+
 // 1 myMap
 // 2 myFilter
 // 3 myForEach
@@ -8,6 +9,7 @@
 // 7 myPush
 // 8 myPop
 // 9 myReduce
+
 
 //----------------myMap
 
@@ -22,7 +24,6 @@
 //         result.push(callback(this[i], i, this));
 //     }
 //     return result;
-
 // }
 
 // const values = arr.myMap((item) => {
@@ -30,8 +31,9 @@
 // })
 
 // console.log(values);
+ 
 
-//-----------------myFilter
+//----------------myFilter
 
 // const arr = [ 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
@@ -45,11 +47,11 @@
 //     return returnArr;
 // };
 
-
 // const values = arr.myFilter(item => item > 5)
 // console.log(values);
 
-//------------------myForEach
+
+//----------------myForEach
 
 // const arr = [ 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
@@ -64,7 +66,8 @@
 
 // arr.myForEach(item => console.log(item))
 
-//-----------------myFlat
+
+//----------------myFlat
 
 // const arr = [1,2,[3,4,[5,6,[7,8,9]]]];
 
@@ -106,7 +109,8 @@
 
 // console.log(myflat(arr,Infinity));
 
-//----------------------myPop
+
+//----------------myPop
 
 // const arr = [ 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
@@ -132,6 +136,19 @@
 
 // console.log(arr.slice(2,5));
 // console.log(arr.mySlice(2,5));
+
+
+//----------------myPush
+
+// const arr = [ 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+// Array.prototype.myPush = function(arg) {
+//     this[this.length] = arg
+// }
+
+// arr.push(15)
+// arr.myPush(20)
+// console.log(arr);//[1, 2, 3, 4, 5, 6, 7, 8, 9, 15, 20]
 
 
 
