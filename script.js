@@ -4,14 +4,14 @@
 // 2 myFilter
 // 3 myForEach
 // 4 myFlat
-// 5 mySlice
-// 6 myIndexOf
+// 5 myPop
+// 6 mySlice
 // 7 myPush
-// 8 myPop
+// 8 myIndexOf
 // 9 myReduce
 
 
-//----------------myMap
+//1----------------myMap
 
 // const arr = [ 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
@@ -33,7 +33,7 @@
 // console.log(values);
  
 
-//----------------myFilter
+//2----------------myFilter
 
 // const arr = [ 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
@@ -51,7 +51,7 @@
 // console.log(values);
 
 
-//----------------myForEach
+//3----------------myForEach
 
 // const arr = [ 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
@@ -67,7 +67,7 @@
 // arr.myForEach(item => console.log(item))
 
 
-//----------------myFlat
+//4----------------myFlat
 
 // const arr = [1,2,[3,4,[5,6,[7,8,9]]]];
 
@@ -110,7 +110,7 @@
 // console.log(myflat(arr,Infinity));
 
 
-//----------------myPop
+//5----------------myPop
 
 // const arr = [ 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
@@ -121,7 +121,7 @@
 // console.log(arr.myPop());
 
 
-//----------------mySlice
+//6----------------mySlice
 
 // const arr = [ 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
@@ -138,19 +138,39 @@
 // console.log(arr.mySlice(2,5));
 
 
-//----------------myPush
+//7----------------myPush
 
-const arr = [ 1, 2, 3, 4, 5, 6, 7, 8, 9];
+// const arr = [ 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-Array.prototype.myPush = function(arg) {
-    for (let i = 0; i < arg.length; i++) {
-        this[this.length] = arg[i]
-    }
-}
+// Array.prototype.myPush = function(arg) {
+//     for (let i = 0; i < arg.length; i++) {
+//         this[this.length] = arg[i]
+//     }
+// }
 
-arr.push(15)
-arr.myPush([16,17,18])
-console.log(arr);//[1, 2, 3, 4, 5, 6, 7, 8, 9, 15, 20]
+// arr.push(15)
+// arr.myPush([16,17,18])
+// console.log(arr);//[1, 2, 3, 4, 5, 6, 7, 8, 9, 15, 20]
+
+
+//8----------------myIndexOf
+
+// const arr = [ 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+// Array.prototype.myIndexOf = function(el) {
+    
+//     for (let i = 0; i < this.length; i++) {
+//       if (this[i] === el ){
+//           return i 
+//       } 
+      
+//     }
+//     return -1
+    
+// };
+
+// console.log(arr.indexOf(9));//8
+// console.log(arr.myIndexOf(8));//7
 
 
 
