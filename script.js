@@ -51,18 +51,65 @@
 
 //------------------myForEach
 
-const arr = [ 1, 2, 3, 4, 5, 6, 7, 8, 9];
+// const arr = [ 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-Array.prototype.myForEach = function(callback) {
+// Array.prototype.myForEach = function(callback) {
     
-    for ( let i = 0; i < this.length; i++) {
-        callback(this[i],i,this)
-    }
+//     for ( let i = 0; i < this.length; i++) {
+//         callback(this[i],i,this)
+//     }
     
     
-}
+// }
 
-arr.myForEach(item => console.log(item))
+// arr.myForEach(item => console.log(item))
+
+//-----------------myFlat
+
+// const arr = [1,2,[3,4,[5,6,[7,8,9]]]];
+
+// Array.prototype.myFlat = (callback) => {
+//     const flattend =[];
+//     (function toflat(list, dp){
+//         for (const el of list) {
+//             if (Array.isArray(el) && dp) {
+//                 toflat(el, dp - 1)
+//             } else {
+//                 flattend.push(el)
+//             }
+//         }
+//     })(this,depth)
+// }
+
+// console.log(arr.myFlat())
+
+// const result = arr.flat(5)
+
+// console.log(result);
+
+//--------------------------------------------------
+// const arr = [1,2,[3,4,[5,6,[7,8,9]]]];
+
+// function myflat(array,depth = 1) {
+//     const flattend = [];
+//     (function flattener(list,dp){
+//         for ( const el of list) {
+//             if (Array.isArray(el) && dp) {
+//                 flattener(el,dp - 1)
+//             } else {
+//                 flattend.push(el)
+//             }
+//         }
+//     })(array,depth);
+//     return flattend
+// }
+
+// console.log(myflat(arr,Infinity));
+
+//------------------------------------------------
+
+
+
 
 
 
