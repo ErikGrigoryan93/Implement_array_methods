@@ -140,15 +140,17 @@
 
 //----------------myPush
 
-// const arr = [ 1, 2, 3, 4, 5, 6, 7, 8, 9];
+const arr = [ 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-// Array.prototype.myPush = function(arg) {
-//     this[this.length] = arg
-// }
+Array.prototype.myPush = function(arg) {
+    for (let i = 0; i < arg.length; i++) {
+        this[this.length] = arg[i]
+    }
+}
 
-// arr.push(15)
-// arr.myPush(20)
-// console.log(arr);//[1, 2, 3, 4, 5, 6, 7, 8, 9, 15, 20]
+arr.push(15)
+arr.myPush([16,17,18])
+console.log(arr);//[1, 2, 3, 4, 5, 6, 7, 8, 9, 15, 20]
 
 
 
