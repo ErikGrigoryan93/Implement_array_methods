@@ -51,20 +51,21 @@
 
 //------------------myForEach
 
-// const arr = [ 1, 2, 3, 4, 5, 6, 7, 8, 9];
+const arr = [ 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-// Array.prototype.myForEach = function(callback) {
-//     const result = [];
-//     for ( let i = 0; i < this.length; i++) {
-//         result.push(callback(this[i],i,this))
-//     }
-//     return result
+Array.prototype.myForEach = function(callback) {
     
-// }
+    for ( let i = 0; i < this.length; i++) {
+        callback(this[i],i,this)
+    }
+    
+    
+}
 
-// arr.myForEach(function(item,i,arr){
-//     console.log(item + i);
-// })
+arr.myForEach(item => console.log(item))
+
+
+
 
 
 
