@@ -71,24 +71,21 @@
 
 // const arr = [1,2,[3,4,[5,6,[7,8,9]]]];
 
-// Array.prototype.myFlat = (callback) => {
-//     const flattend =[];
-//     (function toflat(list, dp){
-//         for (const el of list) {
-//             if (Array.isArray(el) && dp) {
-//                 toflat(el, dp - 1)
-//             } else {
-//                 flattend.push(el)
+// Array.prototype.myFlat = function(array,depth = 1 ) {
+//         const flattend = [];
+//         (function flattener(list,dp){
+//             for ( const el of list) {
+//                 if (Array.isArray(el) && dp) {
+//                     flattener(el,dp - 1)
+//                 } else {
+//                     flattend.push(el)
+//                 }
 //             }
-//         }
-//     })(this,depth)
+//         })(array,depth);
+//         return flattend
 // }
 
-// console.log(arr.myFlat())
-
-// const result = arr.flat(5)
-
-// console.log(result);
+// console.log(myFlat(arr,Infinity));
 
 //--------------------------------------------------
 // const arr = [1,2,[3,4,[5,6,[7,8,9]]]];
@@ -173,7 +170,31 @@
 // console.log(arr.myIndexOf(8));//7
 
 
+//9----------------myReduce
+//array.reduce(function(total, currentValue, currentIndex, arr), initialValue)
 
+// const arr = [ 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+// Array.prototype.myReduce = function(callback,initialValue) {
+//     let accumulator = initialValue;
+//     initialValue === undefined ? undefined : initialValue
+
+//     for (let i = 0; i < this.length; i++) {
+//         if (accumulator !== undefined) {
+//             accumulator = callback.call(undefined,accumulator,this[i],i,this)
+//         } else {
+//             accumulator = this[i]
+//         }
+//     }
+
+//     return accumulator
+// }
+
+// console.log(arr.myReduce((acc,calc) =>{
+//     let sum = 0;
+//     sum = acc + calc;
+//     return sum
+// },0));
 
 
 
