@@ -71,23 +71,25 @@
 
 // const arr = [1,2,[3,4,[5,6,[7,8,9]]]];
 
-// Array.prototype.myFlat = function(array,depth = 1 ) {
-//         const flattend = [];
-//         (function flattener(list,dp){
-//             for ( const el of list) {
-//                 if (Array.isArray(el) && dp) {
-//                     flattener(el,dp - 1)
-//                 } else {
-//                     flattend.push(el)
-//                 }
-//             }
-//         })(array,depth);
-//         return flattend
+// Array.prototype.myFlat = function (myArray, depth) {
+
+//     if (depth === undefined) {
+//         depth = 1;
+//     }
+
+//     for (let item of myArray) {
+//         if (Array.isArray(item) && depth > 0) {
+//             myArray.reduce((acc, val) => acc.concat(val), []);
+//         }
+//     }
+
+
 // }
 
-// console.log(myFlat(arr,Infinity));
+// console.log(arr.myFlat());
 
-//--------------------------------------------------
+//-----------------------impement myFlat() by another way
+
 // const arr = [1,2,[3,4,[5,6,[7,8,9]]]];
 
 // function myflat(array,depth = 1) {
