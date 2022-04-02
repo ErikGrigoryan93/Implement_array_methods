@@ -71,42 +71,23 @@
 
 // const arr = [1,2,[3,4,[5,6,[7,8,9]]]];
 
-// Array.prototype.myFlat = function (myArray, depth) {
-
-//     if (depth === undefined) {
-//         depth = 1;
-//     }
-
-//     for (let item of myArray) {
-//         if (Array.isArray(item) && depth > 0) {
-//             myArray.reduce((acc, val) => acc.concat(val), []);
+// Array.prototype.myFlat = function(depth = Infinity) {
+//     const flatted = [];
+//     let arr = this;
+//     (function foo(list, dp) {
+//         for(let el of list) {
+//             if(Array.isArray(el) && dp) {
+//                 foo(el, dp - 1)
+//             } else {
+//                 flatted.push(el)
+//             } 
 //         }
-//     }
+//     })(this, depth);
 
-
-// }
+//     return flatted;
+// };
 
 // console.log(arr.myFlat());
-
-//-----------------------impement myFlat() by another way
-
-// const arr = [1,2,[3,4,[5,6,[7,8,9]]]];
-
-// function myflat(array,depth = 1) {
-//     const flattend = [];
-//     (function flattener(list,dp){
-//         for ( const el of list) {
-//             if (Array.isArray(el) && dp) {
-//                 flattener(el,dp - 1)
-//             } else {
-//                 flattend.push(el)
-//             }
-//         }
-//     })(array,depth);
-//     return flattend
-// }
-
-// console.log(myflat(arr,Infinity));
 
 
 //5----------------myPop
@@ -183,9 +164,9 @@
 
 //     for (let i = 0; i < this.length; i++) {
 //         if (accumulator !== undefined) {
-//             accumulator = callback.call(undefined,accumulator,this[i],i,this)
+//             accumulator = callback(accumulator,this[i],i,this)
 //         } else {
-//             accumulator = this[i]
+//             accumulator = this[0]
 //         }
 //     }
 
@@ -199,7 +180,32 @@
 // },0));
 
 
+//9----------------myReduceRigth
 
+// const arr = [ 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+// Array.prototype.myReduceRight = function(callback,initialValue) {
+//     let accumulator = initialValue;
+//     initialValue === undefined ? undefined : initialValue
+
+//     for (let i = this.length - 1; i >= 0; i--) {
+//         if (accumulator !== undefined) {
+//             accumulator = callback(accumulator,this[i],i,this)
+//         } else {
+//             accumulator = this[this.length - 1]
+//         }
+//     }
+
+//     return accumulator
+// }
+
+// console.log(arr.reduceRight((acc,calc) =>{
+//     return acc - calc
+// },8));
+
+// console.log(arr.myReduceRight((acc,calc) =>{
+//     return acc - calc
+// },8));
 
 
 
